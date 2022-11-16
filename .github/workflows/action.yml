@@ -1,12 +1,10 @@
 name: Github Action
-
 on:
   watch:
     types: started
-
 jobs:
   build:
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
     - name: Setup Java
@@ -19,7 +17,7 @@ jobs:
     - name: Setup Android Tools
       uses: maxim-lobanov/setup-android-tools@v1
       with:
-        packages: ndk;25.1.8937393
+        packages: ndk;24.0.8215888
     - name: Setup Go
       uses: actions/setup-go@v3
       with:
