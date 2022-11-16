@@ -14,10 +14,6 @@ jobs:
         java-version: 11
     - name: Setup Android SDK
       uses: android-actions/setup-android@v2
-    - name: Setup Android Tools
-      uses: maxim-lobanov/setup-android-tools@v1
-      with:
-        packages: ndk;24.0.8215888
     - name: Setup Go
       uses: actions/setup-go@v3
       with:
