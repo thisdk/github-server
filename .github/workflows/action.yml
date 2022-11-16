@@ -6,7 +6,7 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
     steps:
     - uses: actions/checkout@v3
     - name: Setup Java
@@ -19,10 +19,10 @@ jobs:
     - name: Setup Android Tools
       uses: maxim-lobanov/setup-android-tools@v1
       with:
-        packages: ndk;24.0.8215888
+        packages: ndk;25.1.8937393
     - name: Setup Go
       uses: actions/setup-go@v3
       with:
-        go-version: 1.18
+        go-version: 1.19
     - name: Setup tmate session
       uses: mxschmitt/action-tmate@v3
