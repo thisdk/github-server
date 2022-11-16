@@ -118,7 +118,7 @@ var rootCmd = &cobra.Command{
 				time.Sleep(time.Millisecond)
 				go func() {
 					defer wg.Done()
-					err := runClient(path)
+					err := RunClient(path)
 					if err != nil {
 						fmt.Printf("frpc service error for config file [%s]\n", path)
 					}
@@ -130,7 +130,7 @@ var rootCmd = &cobra.Command{
 		}
 
 		// Do not show command usage here.
-		err := runClient(cfgFile)
+		err := RunClient(cfgFile)
 		if err != nil {
 			fmt.Println(err)
 			os.Exit(1)
@@ -189,7 +189,7 @@ func parseClientCommonCfgFromCmd() (cfg config.ClientCommonConf, err error) {
 	return
 }
 
-func runClient(cfgFilePath string) error {
+func RunClient(cfgFilePath string) error {
 	cfg, pxyCfgs, visitorCfgs, err := config.ParseClientConfig(cfgFilePath)
 	if err != nil {
 		return err
