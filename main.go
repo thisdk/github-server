@@ -12,13 +12,14 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-package main
+package frpclib
 
 import (
-	_ "github.com/fatedier/frp/assets/frpc"
-	"github.com/fatedier/frp/cmd/frpc/sub"
+    "github.com/fatedier/frp/cmd/frpc/sub"
+    "github.com/fatedier/golib/crypto"
 )
 
-func main() {
-	sub.Execute()
+func Run(cfgFilePath string) error {
+    crypto.DefaultSalt = "frp"
+    return sub.RunClient(cfgFilePath)
 }
