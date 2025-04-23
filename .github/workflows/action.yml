@@ -28,7 +28,7 @@ jobs:
           wget https://downloads.immortalwrt.org/releases/24.10.1/targets/x86/64/immortalwrt-sdk-24.10.1-x86-64_gcc-13.3.0_musl.Linux-x86_64.tar.zst
           tar -xf immortalwrt-sdk-24.10.1-x86-64_gcc-13.3.0_musl.Linux-x86_64.tar.zst --zstd
           cd immortalwrt-sdk-24.10.1-x86-64_gcc-13.3.0_musl.Linux-x86_64
-          echo "src-git tcp_brutalhttps://github.com/thisdk/openwrt-tcp-brutal.git;master" > feeds.conf.default
+          echo "src-git tcp_brutal https://github.com/thisdk/openwrt-tcp-brutal.git;master" > feeds.conf.default
           ./scripts/feeds update -a && ./scripts/feeds install -a
 
       - name: 0x04 - firmware start build !!
