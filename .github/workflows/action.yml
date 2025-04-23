@@ -40,4 +40,4 @@ jobs:
       - uses: actions/upload-artifact@v4
         with:
           name: openwrt-ipk
-          path: immortalwrt-sdk-24.10.1-x86-64_gcc-13.3.0_musl.Linux-x86_64/bin/
+          path: immortalwrt-sdk-24.10.1-x86-64_gcc-13.3.0_musl.Linux-x86_64/bin/targets/x86/64/packages
