@@ -35,7 +35,7 @@ jobs:
         run: |
           cd immortalwrt-sdk-24.10.1-x86-64_gcc-13.3.0_musl.Linux-x86_64
           make defconfig
-          make package/luci-app-nikki/compile
+          make package/luci-app-nikki/compile -j2
 
       - uses: actions/upload-artifact@v4
         with:
